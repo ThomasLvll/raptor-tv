@@ -78,7 +78,7 @@ function MovieList() {
           ? [{
             order: -1,
             id: 'search',
-            title: `${searchResults.length} résultats pour « ${searchTerm} »`,
+            title: `${searchResults.length} résultat${searchResults.length > 1 ? 's' : ''} pour « ${searchTerm} »`,
             movies: searchResults,
           }]
           : filterMovieLists(movieLists)

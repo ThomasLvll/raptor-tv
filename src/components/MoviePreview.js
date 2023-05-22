@@ -9,7 +9,7 @@ function MoviePreview({ movie }) {
         <Link to={`/movie/${movie.id}`}>
           <Box>
             { movie.poster_path? (
-            <Image src={`https://www.themoviedb.org/t/p/w220_and_h330_face${movie.poster_path}`} alt={movie.title} boxSize="100%" objectFit="cover" borderRadius="10px" border="1px solid white" _hover={{ 
+            <Image src={`https://www.themoviedb.org/t/p/w220_and_h330_face${movie.poster_path}`} alt={movie.title} boxSize="100%" objectFit="cover" borderRadius="10px" boxShadow='0 0 8px rgba(255, 255, 255, 0.3)' _hover={{ 
             boxShadow: '0 0 8px rgba(255, 255, 255, 0.8)', 
             transform: 'scale(.95)' 
           }}
