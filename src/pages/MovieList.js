@@ -86,12 +86,20 @@ function MovieList() {
         .map((movieList) => (
         <Box key={movieList.id} margin="30px">
           <h2>{movieList.title}</h2>
-          <Box width="100%" overflowX="auto" css={{
+          <Box width="100%" overflowX="auto" paddingBottom="10px" css={{
             '&::-webkit-scrollbar': {
-              display: 'none'
+              height: '6px',
+              backgroundColor: '#888',
+              borderRadius: '10px',
             },
-            '-ms-overflow-style': 'none',
-            'scrollbar-width': 'none',
+            '&::-webkit-scrollbar-track': {
+              borderRadius: '10px',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: '#F2F2F2',
+              borderRadius: '10px',
+            },
+            'scrollbar-width': 'thin'
           }}>
             <HStack spacing={4} shouldWrapChildren>
               {(movieList.movies).slice(0, 20).map((movie) =>
