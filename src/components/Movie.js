@@ -43,7 +43,7 @@ function Movie({ movieId }) {
 
         <Stack>
           <CardBody>
-          <Heading as='h2' size='xl' paddingBottom="10px">{movie.title}</Heading>
+          <Heading as='h2' size='xl' margin="10px">{movie.title}</Heading>
           <Heading as='h4' size='md'>Titre original : "{movie.original_title}"</Heading>
             <Text py='2' mt="5">
             <Heading as='h3' size='md' paddingBottom="10px">Description :</Heading>
