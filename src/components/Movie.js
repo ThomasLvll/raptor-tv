@@ -62,10 +62,6 @@ function Movie({ movieId }) {
               <Stat mt="3">
                 <StatLabel>Popularité</StatLabel>
                 <StatNumber>{movie.popularity }</StatNumber>
-                <StatHelpText>
-                <StatArrow type='decrease' />
-                  Sur {movie.vote_count} votants
-                </StatHelpText>
               </Stat>
               <Stat mt="3">
                 <StatLabel>Date de sortie</StatLabel>
