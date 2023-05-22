@@ -94,7 +94,7 @@ function MovieList() {
             'scrollbar-width': 'none',
           }}>
             <HStack spacing={4} shouldWrapChildren>
-              {(movieList.movies).slice(0, 10).map((movie) =>
+              {(movieList.movies).slice(0, 20).map((movie) =>
                 <Box width="200px" key={movie.id}>
                   <MoviePreview movie={movie} />
                 </Box>
