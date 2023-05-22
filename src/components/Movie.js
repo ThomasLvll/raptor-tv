@@ -33,21 +33,22 @@ function Movie({ movieId }) {
         variant='outline'
         m="30px"
         borderRadius="10px"
-      >
+      > 
+      {movie.poster_path? (
         <Image
           objectFit='cover'
           maxW={{ base: '100%', sm: '200px' }}
           src={`https://www.themoviedb.org/t/p/w220_and_h330_face${movie.poster_path}`}
           alt={movie.title}
-        />
-
+        />): ((<Box border="1px solid white" minHeight="300px" borderRadius="10px" textAlign="center" paddingTop="30px" backgroundColor="#E4CF87" fontWeight="500" color="#232323" as='h3' size='md' width="200px">{movie.title}</Box>))
+      }
         <Stack>
           <CardBody>
-          <Heading as='h2' size='xl' margin="0 0 10px 0">{movie.title}</Heading>
+          <Heading as='h2' size='xl' margin="0 0 20px 0">{movie.title}</Heading>
           <Heading as='h4' size='md'>Titre original : "{movie.original_title}"</Heading>
             <Text py='2' mt="5">
-            <Heading as='h3' size='md' paddingBottom="10px">Description :</Heading>
-            <p>{movie.overview}</p>
+            {/* <Heading as='h3' size='md' paddingBottom="10px">Description :</Heading> */}
+            <p marginBottom="30px">{movie.overview}</p>
             </Text>
             <Flex>
               <Stat mt="3">
